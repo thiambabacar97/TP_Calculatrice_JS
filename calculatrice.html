@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My best Calculatrice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container col-md-4 mt-3">
+        <div class="card text-center">
+            <div class="card-header">
+              My best Calculatrice
+            </div>
+            <div class="card-body">
+                <form id="form"></form>
+                <div class="form-group ">
+                  <label >Nombre 1</label>
+                  <input type="number" class="form-control " id="nbr1" onkeyup="ecouteurInput1()">
+                  <div class="invalid-feedback">
+                    Entrez un nombre :)
+                  </div>
+                </div>
+                <div class="form-group" >
+                    <label>Nombre 2</label>
+                    <input type="number" class="form-control " id="nbr2" onkeyup="ecouteurInput2()">
+                    <div class="invalid-feedback">
+                        Entrez un nombre :)
+                     </div>
+                </div>
+                <div class="form-group">
+                    <select class="custom-select custom-select-lg mb-3" id="op" onchange="ecouteurSelect()"> 
+                        <option selected value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                      </select>
+                      <div class="invalid-feedback" id="zero">
+                        Impossible de diviser par ZERO :)
+                     </div>
+                </div>
+            </form>
+            </div>
+            <div class="card-footer text-success" id="resultSuccess">
+              
+            </div>
+        </div>
+       
+    </div>
+</body>
+<script src="test.js"></script>
+<script type="text/javascript" src="calculatrice.js"></script>
+</html>
